@@ -1,0 +1,14 @@
+# # Python 环境文件
+__pycache__
+.venv
+venv
+*.pyc
+
+*.gz
+*.tar
+*.zip
+*.xml
+*.log
+*.7z
+
+output/*

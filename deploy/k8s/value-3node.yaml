@@ -1,0 +1,71 @@
+# Hadoop image configuration
+image:
+  repository: yeisme0123/hadoop-mahout
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Hadoop version
+hadoopVersion: 3.3.2
+
+# Anti-affinity settings
+antiAffinity: hard
+
+# HDFS NameNode configuration
+hdfs:
+  nameNode:
+    pdbMinAvailable: 1
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 10m
+      limits:
+        memory: 2048Mi
+        cpu: 1000m
+  dataNode:
+    replicas: 3
+    pdbMinAvailable: 1
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 10m
+      limits:
+        memory: 2048Mi
+        cpu: 1000m
+  webhdfs:
+    enabled: true
+
+# YARN ResourceManager configuration
+yarn:
+  resourceManager:
+    pdbMinAvailable: 1
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 10m
+      limits:
+        memory: 2048Mi
+        cpu: 1000m
+  nodeManager:
+    replicas: 3
+    pdbMinAvailable: 1
+    resources:
+      requests:
+        memory: 2048Mi
+        cpu: 1000m
+      limits:
+        memory: 2048Mi
+        cpu: 1000m
+    parallelCreate: false
+
+# Persistence settings
+persistence:
+  nameNode:
+    enabled: false
+    storageClass: ""
+    accessMode: ReadWriteOnce
+    size: 20Gi
+  dataNode:
+    enabled: false
+    storageClass: ""
+    accessMode: ReadWriteOnce
+    size: 30Gi

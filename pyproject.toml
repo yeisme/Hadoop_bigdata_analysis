@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hadoop-bigdata-analysis"
+version = "0.1.0"
+description = "利用Hadoop中的Mahout搭建分布式大数据分析平台，该平台中至少有3个以上客户端，并完成以下3个任务"
+authors = ["yesisme <yefun2004@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ruff = "^0.7.3"
+requests = "^2.32.3"
+pandas = "^2.2.3"
+aiofiles = "^24.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
