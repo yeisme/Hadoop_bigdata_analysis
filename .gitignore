@@ -11,4 +11,4 @@ venv
 *.log
 *.7z
 
-output/*
+output/

@@ -12,10 +12,10 @@ help:
 	@echo "  uninstall   Uninstall Hadoop"
 
 1node:
-	helm install hadoop pfisterer-hadoop/hadoop -f .\value-1node.yaml
+	helm install hadoop pfisterer-hadoop/hadoop -f ./value-1node.yaml
 
 3node:
-	helm install hadoop pfisterer-hadoop/hadoop -f .\value-3node.yaml
+	helm install hadoop pfisterer-hadoop/hadoop -f ./value-3node.yaml
 
 uninstall:
 	helm uninstall hadoop
