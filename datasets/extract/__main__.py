@@ -25,7 +25,7 @@ if __name__ == "__main__":
     datasets = [
         ("DBLP.xml.gz", "DBLP"),
         ("ImageNet.zip", "ImageNet"),
-        ("Twitter_Sentiment_Analysis.zip", "Twitter_Sentiment_Analysis"),
+        ("forest.zip", "forest"),
     ]
 
     for file_name, output_subdir in datasets:

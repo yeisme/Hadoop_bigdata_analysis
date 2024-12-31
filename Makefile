@@ -11,3 +11,7 @@ unzip:
 # k8s部署
 deploy:
 	sh script/start_hadoop_service.sh
+
+# 数据预处理
+data_preprocessing:
+	sh script/data_preprocessing.sh
