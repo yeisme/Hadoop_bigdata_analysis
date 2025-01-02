@@ -10,6 +10,10 @@ help:
 	@echo "  1node       Install Hadoop with 1 node"
 	@echo "  3node       Install Hadoop with 3 nodes"
 	@echo "  uninstall   Uninstall Hadoop"
+	@echo "  port-forward   Port forward to Hadoop Web UIs"
+	@echo "  mahout      Build Mahout Docker image"
+	@echo "  down        Download Hadoop and Mahout tarballs"
+	@echo "  helm-repo   Add Hadoop Helm repo"
 
 1node:
 	helm install hadoop pfisterer-hadoop/hadoop -f ./value-1node.yaml
@@ -32,3 +36,8 @@ mahout: down
 
 down:
 	sh ./download.sh
+
+# 安装 helm repo
+helm-repo:
+	helm repo add pfisterer-hadoop https://pfisterer.github.io/apache-hadoop-helm/
+	helm repo update

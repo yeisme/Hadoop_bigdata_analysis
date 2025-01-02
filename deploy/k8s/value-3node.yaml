@@ -8,7 +8,7 @@ image:
 hadoopVersion: 3.3.2
 
 # Anti-affinity settings
-antiAffinity: hard
+antiAffinity: soft
 
 # HDFS NameNode configuration
 hdfs:

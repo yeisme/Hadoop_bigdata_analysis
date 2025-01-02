@@ -1,22 +1,8 @@
-# 1. 查看生成的目录结构
-hdfs dfs -ls /user/hadoop/input/forest/covtype_vectors
-
-# 2. 查看向量数据
-mahout vectordump \
-    -i /user/hadoop/input/forest/covtype_vectors/tfidf-vectors \
-    -o /tmp/vector_dump.txt \
-    -p true \
-    -vs 10
-
-# 3. 查看聚类结果
+# 1. 查看最终聚类中心
 mahout clusterdump \
-    -i /user/hadoop/output/forest/clusters/clusters-*-final \
-    -o /tmp/cluster_dump.txt \
-    -d /user/hadoop/input/forest/covtype_vectors/dictionary.file-0 \
-    -dt sequencefile \
-    -n 10 \
-    -p 10
+    -i /user/hadoop/output/forest/clusters/clusters-1-final \
+    -o /tmp/clusters_dump.txt
 
-# 4. 查看结果文件
-cat /tmp/vector_dump.txt
-cat /tmp/cluster_dump.txt
+# 3. 查看结果
+echo "=== 聚类中心 ==="
+cat /tmp/clusters_dump.txt
